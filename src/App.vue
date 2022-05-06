@@ -1,17 +1,37 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+	<header class="header">
+		<router-link to="/">
+			<img class="header__logo" src="../public/assets/img/logo.png" alt="Logotipo">
+		</router-link>
+	</header>
+
+	<nav class="navegacion">
+		<router-link @click="changePage('/')" v-bind:class="[this.page === '/' ? 'navegacion__enlace navegacion__enlace--activo' : 'navegacion__enlace']" to="/">Tienda</router-link>
+		<router-link @click="changePage('/about')" v-bind:class="[this.page === '/about' ? 'navegacion__enlace navegacion__enlace--activo' : 'navegacion__enlace']" to="/about">Nosotros</router-link>
+	</nav>
+
+	<router-view/>
+
+	<footer class="footer">
+		<p class="footer__texto">Front End Store - Todos los derechos Reservados 2022.</p>
+	</footer>
+
 </template>
 
-<style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
-</style>
+<script>
+export default {
+	// state
+	data () {
+		return {
+			page: '/'
+		}
+	},
+	// actions
+	methods: {
+		changePage (page) {
+			console.log(page)
+			this.page = page
+		}
+	}
+}
+</script>

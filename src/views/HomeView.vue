@@ -1,18 +1,34 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<main class="contenedor">
+		<h1>Nuestros Productos</h1>
+		<div class="grid">
+			<ProductDetails name="VueJS" price="$25" image="1.jpg" />
+			<ProductDetails name="AngularJS" price="$25" image="2.jpg" />
+			<ProductDetails name="ReactJS" price="$25" image="3.jpg" />
+			<ProductDetails name="Redux" price="$25" image="4.jpg" />
+			<ProductDetails name="Node.js" price="$25" image="5.jpg" />
+			<ProductDetails name="SASS" price="$25" image="6.jpg" />
+			<ProductDetails name="SASS" price="$25" image="7.jpg" />
+			<ProductDetails name="GitHub" price="$25" image="8.jpg" />
+			<ProductDetails name="BulmaCSS" price="$25" image="9.jpg" />
+			<ProductDetails name="TypeScript" price="$25" image="10.jpg" />
+			<ProductDetails name="Drupal" price="$25" image="11.jpg" />
+			<ProductDetails name="Javascript" price="$25" image="12.jpg" />
+			<ProductDetails name="GraphQL" price="$25" image="13.jpg" />
+			<ProductDetails name="WordPress" price="$25" image="14.jpg" />
+			<div class="grafico grafico--camisas"></div>
+			<div class="grafico grafico--node"></div>
+		</div>
+	</main>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ProductDetails from '@/components/ProductDetails.vue'
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+	name: 'HomeView',
+	components: {
+		ProductDetails
+	}
 }
 </script>
