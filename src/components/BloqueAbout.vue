@@ -12,13 +12,13 @@ export default {
 	props: {
 		title: String,
 		image: String,
-		content: String
+		content: String,
 	},
 	methods: {
-		resolve_img_url: function (path) {
-			const images = require.context('../../public/assets/img/', false, /\.png$|\.jpg$/)
-			return images(`./${path}`)
-		}
-	}
-}
+		resolve_img_url(path) {
+			const images = require.context('../../public/assets/img/', false, /\.png$|\.jpg$/);
+			return images(`./${path}`);
+		},
+	},
+};
 </script>

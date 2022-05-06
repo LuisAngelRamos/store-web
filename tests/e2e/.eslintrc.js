@@ -1,14 +1,33 @@
 module.exports = {
 	plugins: [
-		'cypress'
+		'cypress',
 	],
 	env: {
 		mocha: true,
-		'cypress/globals': true
+		'cypress/globals': true,
 	},
 	rules: {
 		strict: 'off',
-		indent: [4, 'tab'],
-		'no-tabs': 0
-	}
-}
+		indent: [2, 'tab'],
+		'no-tabs': 0,
+		'import/extensions': [
+			'error',
+			'ignorePackages',
+			{
+				js: 'never',
+				mjs: 'never',
+				jsx: 'never',
+				ts: 'never',
+				tsx: 'never',
+				vue: 'never',
+			},
+		],
+	},
+	settings: {
+		'import/resolver': {
+			node: {
+				extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.vue'],
+			},
+		},
+	},
+};

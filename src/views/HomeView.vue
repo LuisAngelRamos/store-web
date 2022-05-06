@@ -23,12 +23,12 @@
 </template>
 
 <script>
-import ProductDetails from '@/components/ProductDetails.vue'
+import ProductDetails from '../components/ProductDetails';
 
 export default {
 	name: 'HomeView',
 	components: {
-		ProductDetails
-	}
-}
+		ProductDetails,
+	},
+};
 </script>
